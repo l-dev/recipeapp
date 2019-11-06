@@ -1,0 +1,18 @@
+{% extends 'recipe/base.html' %} {% block content %}
+<h2>{{recipes.name}}</h2> <a href="">(edit)</a>
+<h4>{{recipes.origin}}</h4>
+
+<img src="{{ recipes.photo_url }}" alt=""/>
+
+<h4> {{recipes.body}}</h4>
+
+<h3>Comments:</h3>
+<ul>
+    {% for comments in recipes.comments.all %}
+    <li>
+        {{comments.body}}
+    </li>
+    {% endfor %}
+</ul>
+<p>Add a comment <a href="{% url 'comment_create' %}">(+)</a></p>
+{% endblock %}
