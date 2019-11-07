@@ -9,8 +9,6 @@ body {
   }
 
   nav a {
-    
-    border: 1px solid black;
     margin: 0.5em;
     padding: 0.5em;
     background-color: #eeeeee;
@@ -53,4 +51,8 @@ body {
   .title{
       font-size: 50px;
       text-align: center;
+    
+  }
+  header{
+    background-color:thistle;
   }

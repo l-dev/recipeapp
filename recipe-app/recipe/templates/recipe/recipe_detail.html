@@ -1,5 +1,5 @@
 {% extends 'recipe/base.html' %} {% block content %}
-<h2>{{recipes.name}}</h2> <a href="">(edit)</a>
+<h2>{{recipes.name}}</h2> <a href="{% url 'recipe_edit' pk=recipes.pk %}">(edit)</a>
 <h4>{{recipes.origin}}</h4>
 
 <img src="{{ recipes.photo_url }}" alt=""/>
@@ -14,5 +14,7 @@
     </li>
     {% endfor %}
 </ul>
+<h4><a href="{% url 'recipe_delete' pk=recipes.pk %}">Delete Recipe</a></h4>
 <p>Add a comment <a href="{% url 'comment_create' %}">(+)</a></p>
+
 {% endblock %}
