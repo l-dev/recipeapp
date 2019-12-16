@@ -1,2 +1,2 @@
-# Recipe App!
-Yet another app to store recipes!
+# Recipe App! -- Coming soon!
+
